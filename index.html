@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Calendar</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="start(new Date())">
+  <!--------------  calendar trying ----------------------->
+  <div class="container">
+    <div class="top-bar">
+      My Calendar
+      <div class="login-container">
+        <input type="text" placeholder="Username" name="username">
+        <input type="password" placeholder="Password" name="password">
+        <button class="btn" id="login-btn" onclick="login()">Login</button>
+        <button class="btn" id="noti-btn" onclick="opennoti()">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAvUlEQVRIie2TPQrCQBBGZ2yieATtzGH0ADmGwevYehdFsNFaq3iHdPIs3EAI2biTHwjog+l2v/ftsivyMwAx8HATh+6bGByJiKzcJNaCXoAISF3zgjuwBaKu4Uvghp8rsOjSvCm8LLGfBNgFhBekbQQXg+Dsy9EGQS4is8A+uarOrQICwz9BqrVZln/Qir9ghAJgCuytQcABqH2q1YUnwwercvx6AhF5Wdv3tHdggGfpKrIhBBsgc7PuXTBa3mysUmE2wBOOAAAAAElFTkSuQmCC" />
+        </button>
+      </div>
+    </div>
+    <div class="calendar">
+      <table id="calendar-table">
+      </table>
+    </div>
+    <div class="detail-box">
+      <table id="detail-table">
+        <thead>
+          <tr id="detail-table-head">
+            <th colspan="2" class="month" name="" id="date-month-year-ad">
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2" id="event-box">
+              <div id="event-detail"></div>
+              <div id="event-form"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot id="detail-box-foot">
+          <tr>
+            <td id="add-event-btn-box">
+            </td>
+            <td id="delete-event-btn-box">
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  <div class="noti" id="pop-up-box">
+    <div class="noti-bar" id="pop-up-bar">
+      <h2> Notifications <span></span></h2>
+      <button id="noti-close-btn" onclick="opennoti()"><img     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABOklEQVRIie3VvUoDQRQF4M8/UAjBRlCjopaCaey19xl8ERFBkPgiPoR9bMRWO4sUGlRsJApBC7XY2ZAMIftjOj3Nztw795yZuWcZ/pGBiWg+iTrWMVeQq4sWbvCVBqeiRXVsYaYguVCzEDb5nAYno0UbJYhjbPZPYoGi1zIMs6MEYlSwH75FcrkFdnGAY1T74tUQOwhrSgs0cY9VHAXiahivhlxzFEHsou1o/olribvWsIM9rKCNM3SG8N7mPYFAcIYHLGEZT2jgNas4j0CK+KfMhTwC6Z3XJDtvYzHE5n8rUDHY0BOchnENh8Zg05S8IelHJ4xTd420aZaLHiWNPMdbX/wDVyF3KXFbP3oums44wTsuSuR6iK+om1WQAwMcsUBrDAIDHHEPXoJoRfE3oYs7yYPzXXZ3fxA/Fxc5eE9BFCcAAAAASUVORK5CYII=" />
+      </button>
+    </div>
+    <div id = 'pop-up-text'>
+<!--       <ul>
+        <li>homework_1</li>
+          <ul>
+            <li>date_1</li>
+          </ul>
+      </ul> -->
+    </div>
+  </div>
+<!--   <button onclick = "refreshEvent()">test</button> -->
+  <script src="script.js"></script>
+  <script type='module' src="firebase.js"></script>
+</body>
+
+</html>

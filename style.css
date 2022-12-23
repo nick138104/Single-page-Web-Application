@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body {
+  font-family: 'Bebas Neue', cursive;
+}
+
+ /* ------------------ CONTAINER GRID -------------------------- */
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.25fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr;
+
+  gap: 10px;
+
+  margin: 5px;
+  
+  box-sizing: border-box;
+}
+
+/* ------------------ TOP BAR ---------------------------------- */
+.top-bar {
+  overflow: hidden;
+  background-color: #163A5f;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  border-radius: 8px;
+  height:150px;
+  color:white;
+  text-align: justify;
+  padding:14px 16px;
+  font-size:30px;
+}
+ 
+.top-bar a {
+  float: left;
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px; 
+}
+
+.top-bar .login-container {
+  width: 700px;
+  float: right;
+  overflow: hidden;
+  font-size:17px;
+}
+
+.top-bar input[type=text] {
+  float: left;
+  padding: 8px;
+  margin-top: 8%;;
+  margin-right: 8px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  width: 30%;
+}
+
+.top-bar input[type=password] {
+  float: left;
+  padding: 8px;
+  margin-top: 8%;;
+  margin-right: 8px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  width: 30%; 
+}
+
+.top-bar .login-container button {
+  float: left;
+  padding: 8px;
+  margin-top: 8%;;
+  margin-right: 20px;
+  background: #1D566E;
+  font-size: 1.1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.top-bar .login-container button:hover{
+  color: rgb(255, 200, 105);
+}
+
+#noti-btn{
+  float: left;
+  padding: 8px;
+  margin-top: 8%;
+  margin-right: 22px;
+  background: #1D566E;
+  font-size: 1.1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  height : 40px;
+  width : 40px;
+}
+#noti-btn:hover {
+  background: rgb(255, 200, 105);
+}
+
+
+#logo-label{
+  font-size: 1.8em;
+  height: 100px;
+  margin-top: 2.5%;
+  font-weight: bold;
+  background: #163A5f;
+  color: white;
+  text-align: center;
+  align-items:center
+  justify-content:center;
+}
+
+
+/* ------------------ CALENDAR ---------------------------------- */
+
+.calendar {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+}
+
+.table-foot {
+  background: #6783AE;
+}
+
+#calendar-table {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 10px 10px;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  border-radius: 8px;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+#calendar-table thead {
+  font-weight: bold;
+  background: #6783AE;
+  color: white;
+}
+
+#calendar-table > thead > tr > th {
+  text-align: center;
+}
+
+#calendar-table td, #calendar-table th {
+  padding: 30px 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar > date:hover{
+  background-color: rgb(255, 200, 105);
+  color: white;
+}
+
+/* ------------------ DETAIL BOX ---------------------------------- */
+.detail-box {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+}
+
+#detail-table {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 10px 10px;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  border-radius: 10px;
+  border-collapse: collapse;
+  overflow: scroll;
+}
+
+#detail-table thead {
+  font-size: 1.4em;
+  height: 100px;
+  font-weight: bold;
+  background: #6783AE;
+  color: white;
+  align-items:center;
+  justify-content:center;
+}
+
+#detail-table tbody {
+  height: 100px;
+  vertical-align: top;
+  text-align: left;
+  overflow: hidden;
+}
+
+#detail-table tfoot {
+  height: 5vh;
+  width: 100%;
+  font-weight: bold;
+  background: #6783AE;
+  color: white;
+}
+#detail-table tfoot > tr > td {
+  width: 50%;
+}
+
+#detail-table td {
+  align-items:center;
+  justify-content:center;
+  text-align: center; 
+  vertical-align: middle;/*---<3-----*/
+}
+
+.ordinal-number {
+  font-size:0.6em;
+}
+/* ------------------ TITLE FORM ---------------------------------- */
+
+#ftitle {
+  font-size: 0.8em;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  margin: 10px;
+}
+
+#flink{
+  font-size: 0.8em;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  margin: 10px;
+}
+
+#frepeat{
+  margin-top: 1%;
+}
+
+#frepeat-head{
+  font-size: 1.1em;
+  width: 200px;
+  margin: 1%;
+}
+#frepeat{
+  width: 25px;
+  height:25px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  margin-bottom: 6%;
+}
+.detail-form{
+  
+}
+
+
+/* ------------------ DATE ---------------------------------- */
+
+.valid-date{
+  background-color: #eee;
+  border:0.5px solid white;
+}
+.fakevalid-date{
+  background-color: #eee;
+  border:0.5px solid white;
+}
+
+.invalid-date{
+  border:0.5px solid white;
+}
+
+.fakeinvalid-date{
+  border:0.5px solid white;
+}
+
+.valid-date:hover {
+  background-color: rgb(255, 200, 105);
+  color: white;
+}
+
+.invalid-date:hover {
+  background: rgb(255, 120, 105);
+  color: white;
+}
+
+/* ------------------ event details ---------------------------------- */
+
+
+#event-details{
+  float:left;
+  position:static;
+  scrollbar-width: none;
+  height: 150px;
+  width: 344.31px;
+}
+
+#event-details-head{
+  position: relative;
+  font-size:1.4em;
+  font-weight:bold;
+  margin-top: -60%;
+}
+
+#event-details-body{
+  position: relative;
+  font-size:1.4em;
+  font-weight:bold;
+  margin-top: -60%;
+}
+
+.event-title{
+  font-size:1.0em;
+  font-weight:bold;
+  overflow-y: scroll;
+}
+.event-link{
+  font-size:0.8em;
+  font-weight:normal;
+}
+/* ------------------ BUTTON ---------------------------------- */
+
+.btn {
+  font-family: 'Bebas Neue';
+  font-size: 1.2em;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 10px;
+  border: 1px solid #aaa;
+  background: #aaa;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: rgb(255, 200, 105);
+  color: white;
+}
+
+#add-event-btn  {
+  white-space: nowrap;
+  width: fit-content;
+  font-family: 'Bebas Neue';
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 10px;
+  border: 1px solid #00B1FF;
+  background: #00B1FF;
+  cursor: pointer;
+  
+  margin-top: 10%;
+  margin-bottom: 10%;
+  
+}
+
+#delete-event-btn {
+  width: fit-content;
+  white-space: nowrap;
+  font-family: 'Bebas Neue';
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 10px;
+  border: 1px solid rgb(255, 120, 105);
+  background: rgb(255, 120, 105);
+  cursor: pointer;
+
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+
+#close-btn {
+  white-space: nowrap;
+  width: fit-content;
+  font-family: 'Bebas Neue';
+  font-size: 1.6em;
+  font-weight: bold;
+
+  
+}
+
+#submit-btn {
+  font-family: 'Bebas Neue';
+  font-size: 1.2em;
+  border: 1px solid #00B1FF;
+  background: #00B1FF;
+  border-radius: 10px;
+  margin: 80px;
+}
+
+.month-btn {
+  font-size: 1.0em;
+  color: white;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  padding: 20px;
+}
+
+.month-btn:hover {
+  color: rgb(255, 200, 105);
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+}
+
+.date-btn {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ----------------------------------------------------------- */
+
+.noti {
+	width: 300px;
+	height: 300px;
+	opacity: 0;
+	position: fixed;
+	bottom: 0;
+  left: 20px;
+	transition: 1s opacity, 250ms height;
+	box-shadow: 0 4px 8px 0 rgba(255, 120, 105, 2), 0 6px 20px 0 rgba(255, 120, 105, 2);
+  background-color:  #eee;
+  overflow: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.noti h2 {
+	font-size: 1.1em;
+	padding: 8px;
+	border-bottom: 1px solid #eee;
+	color: black;
+  float:left;
+  
+}
+.noti h2 span {
+	color: #f00;
+}
+
+#noti-close-btn{
+  border:none;
+  cursor: pointer;
+  height:10px;
+  width:10px;
+  margin-top:19px;
+}
+.noti-bar {
+  display: flex;
+}
+
+
+@media screen and (max-width: 1600px){
+  #detail-table thead{
+    font-size:0.95em;
+  }
+  
+}
+
+
+@media screen and (max-width: 1190px){
+  #detail-table thead{
+    font-size:0.95em;
+  }
+}
+
+@media screen and (max-width: 1050px){
+  #detail-table thead{
+    font-size:0.7em;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .top-bar {
+    background-color:#163A5f;
+    float:left;
+ }
+  .top-bar .login-container {
+  float: left;
+}
+  #detail-table thead{
+    font-size:0.5em;
+  }
+}
+@media screen and (max-width: 650px){
+  .top-bar {
+    background-color:#163A5f;
+    float:left;
+ }
+  .top-bar input[type=text] {
+    width: 20%;
+}
+  .top-bar input[type=password] {
+  width: 20%; 
+}
+}
+/*move eventbox*/
+@media screen and (max-width: 550px){
+  .container {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.25fr 0.5fr 0.5fr 0.8fr;
+  }
+  .detail-box {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 4;
+  grid-row-end: span 4;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  .top-bar {
+    background-color:#163A5f;
+    float:left;
+    align-items:center;
+  }
+  .top-bar input[type=text] {
+    width: 15%;
+  }
+    .top-bar input[type=password] {
+    width: 15%; 
+  }
+  #detail-table thead{
+    font-size:0.9em;
+  }
+  #noti-close-btn{
+  border:none;
+  cursor: pointer;
+  height:40px;
+  width:100px;
+  margin-top:19px;
+  }
+}
+
